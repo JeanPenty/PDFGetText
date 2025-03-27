@@ -1,0 +1,48 @@
+﻿<SOUI name="mainWindow" 
+	  title="@string/title" 
+	  bigIcon="ICON_LOGO:32" 
+	  smallIcon="ICON_LOGO:16" margin="5,5,5,5"  resizable="1" wndType="appMain"
+appWnd="1"
+translucent="1" 
+trCtx="dlg_main"
+>
+  <root skin="_skin.sys.wnd.bkgnd" cache="1"  width="1000" height="700" >
+    <caption pos="0,0,-0,30" show="1" font="adding:0">
+      <icon pos="10,8" src="ICON_LOGO:16"/>
+      <text pos="29,9">PDF文本信息提取工具</text>
+      <imgbtn name="btn_close" skin="_skin.sys.btn.close"    pos="-45,0" tip="close" animate="1"/>
+      <imgbtn name="btn_max" skin="_skin.sys.btn.maximize"  pos="-83,0" animate="1" />
+      <imgbtn name="btn_restore" skin="_skin.sys.btn.restore"  pos="-83,0" show="0" animate="1" />
+      <imgbtn name="btn_min" skin="_skin.sys.btn.minimize" pos="-121,0" animate="1" />
+    </caption>
+    <window pos="5,[2,-5,-5">
+		
+		<text pos="0,[20,@60,@30" font="face:微软雅黑,size:12">源文件: </text>
+		<edit name="edit_path" number="1" readOnly="1" inset="5,0,0,25" class="cls_edit" pos="[0,{0,-100,@30"/>
+		<button name="btn_select_file" pos="[10,{0,@80,@30" text="选择文件" focusable="0"/>
+		
+		<text pos="0,[20,@60,@30" font="face:微软雅黑,size:12">输出路径: </text>
+		<edit name="edit_output_path" number="1" readOnly="1" inset="5,0,0,25" class="cls_edit" pos="[0,{0,-190,@30"/>
+		<button name="btn_select_output" pos="[10,{0,@80,@30" text="选择目录" focusable="0"/>
+		<button name="btn_parase" pos="[10,{0,@80,@30" text="解析至文档" focusable="0"/>
+		
+		<button name="btn_pre_page" pos="0,[10,@80,@30" text="上一页" focusable="0"/>
+		<button name="btn_next_page" pos="[10,{0,@80,@30" text="下一页" focusable="0"/>
+
+		<text name="txt_curpage" pos="[20,{0,@120,@30">当前页码：-</text>
+		<edit name="edit_content"
+			  multiLines="1"
+			  readOnly="1"
+			  inset="10,10,10,10"
+			  class="cls_edit"
+			  pos="10,[10,-10,-10"
+			  password="0"
+			  wordWrap="1"
+			  autoWordSel="1"
+			  vscrollBar="1"
+			  autoVscroll="1"
+			  hscrollBar="0"
+			  font="face:微软雅黑,size:12"/>
+    </window>
+  </root>
+</SOUI>
